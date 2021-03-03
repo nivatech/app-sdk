@@ -3,7 +3,7 @@ import { AppMessage } from './AppMessage';
 import { AppMessageType } from './AppMessageType';
 import { Theme } from '../sdk/Theme';
 import { Locale } from '../sdk/Locale';
-import { Color } from '../sdk/Color';
+import { TokenInfo } from './TokenInfo';
 
 export class InitMessage extends AppMessage {
   /**
@@ -31,28 +31,19 @@ export class InitMessage extends AppMessage {
   theme: Theme;
 
   /**
-   * Color of the current user.
+   * Oauth token to be used by the app in accessing Papiri APIs
    *
-   * @type {Color}
+   * @type {TokenInfo}
    * @memberof InitMessage
    */
-  color: Color;
+  public tokenInfo: TokenInfo;
 
   /**
-   * Unique identifier hash of the user.
-   *
-   * @type {(string)}
-   * @memberof InitMessage
-   */
-  userIdentifier: string;
-
-  /**
-   * Session id value is generated on host and is unique per addon loading.
-   * If can be used used to correlate events on server and addon and enable
-   * e2e tracking or it can be used when reporting an addon issue to Host.
+   * Host of the api to be used when making a session call
+   * e.g. https://argus.papiri.rs/v1
    *
    * @type {string}
    * @memberof InitMessage
    */
-  public sessionId: string;
+  public apiHost: string;
 }

@@ -1,5 +1,6 @@
 import { Locale } from '../sdk/Locale';
 import { Theme } from '../sdk/Theme';
+import { SessionContext } from './SessionContext';
 
 export class AppContext {
   /**
@@ -19,10 +20,10 @@ export class AppContext {
   public theme: Theme;
 
   /**
-   * Unique identifier of the user.
+   * Information about session user and tenant.
    *
-   * @type {string}
-   * @memberof Context
+   * @type {SessionContext}
+   * @memberof AppContext
    */
-  public userIdentifier?: string;
+  public session: SessionContext;
 }
