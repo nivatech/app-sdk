@@ -15,7 +15,7 @@ export class RuntimeContext {
   public theme: Theme = Theme.LIGHT;
 
   /**
-   * Correlation id sent as a part of init message from Outreach addon host
+   * Correlation id sent as a part of init message from addon host
    *
    * @type {string}
    * @memberof RuntimeContext

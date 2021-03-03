@@ -19,7 +19,7 @@ export class AppContext {
   public theme: Theme;
 
   /**
-   * Unique identifier of the Outreach user.
+   * Unique identifier of the user.
    *
    * @type {string}
    * @memberof Context

@@ -1,5 +1,5 @@
 {
-    "name": "@outreach/client-addon-sdk",
+    "name": "nivatech-app-sdk",
     "main": "build/index.d.ts",
     "out": "../dist/index.d.ts"
 }

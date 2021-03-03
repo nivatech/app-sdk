@@ -114,11 +114,11 @@ class AppSdk {
   }
 
   /**
-   * Initialize the SDK by sending a ready() signal to the Outreach host
-   * and resolving a promise when Outreach host responds with a current user
+   * Initialize the SDK by sending a ready() signal to the host
+   * and resolving a promise when host responds with a current user
    * initialization context
    *
-   * @returns {Promise<OutreachContext>}
+   * @returns {Promise<AppContext>}
    * @memberof AddonsSdk
    */
   public init = async (): Promise<AppContext> => {
@@ -161,7 +161,7 @@ class AppSdk {
   };
 
   /**
-   * Sends request to Outreach hosting app to notify Outreach user
+   * Sends request to hosting app to notify user
    * about a certain even happening in addon.
    *
    * @memberof AddonsSdk

@@ -39,7 +39,7 @@ export class InitMessage extends AppMessage {
   color: Color;
 
   /**
-   * Unique identifier hash of the Outreach user.
+   * Unique identifier hash of the user.
    *
    * @type {(string)}
    * @memberof InitMessage
@@ -49,7 +49,7 @@ export class InitMessage extends AppMessage {
   /**
    * Session id value is generated on host and is unique per addon loading.
    * If can be used used to correlate events on server and addon and enable
-   * e2e tracking or it can be used when reporting an addon issue to Outreach.
+   * e2e tracking or it can be used when reporting an addon issue to Host.
    *
    * @type {string}
    * @memberof InitMessage

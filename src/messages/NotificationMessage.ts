@@ -23,7 +23,7 @@ export class NotificationMessage extends AppMessage {
   public notificationText: string;
 
   /**
-   * Type of notification being shown to Outreach user.
+   * Type of notification being shown to Host user.
    *
    * @type {NotificationType}
    * @memberof NotificationMessage
