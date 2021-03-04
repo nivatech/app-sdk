@@ -18,5 +18,3 @@ export class SessionContext {
    */
   public user: UserInfo;
 }
-
-
