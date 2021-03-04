@@ -20,7 +20,6 @@ import { LoadInfoMessage } from './messages/LoadInfoMessage';
 import { utils } from './utils';
 
 import { Task } from './sdk/Task';
-import sessionDataService from './services/sessionDataService';
 
 export * from './context/AppContext';
 export * from './context/LoadingContext';
@@ -290,14 +289,15 @@ class AppSdk {
   ): Promise<AppContext> => {
     runtime.locale = initMessage.locale;
     runtime.theme = initMessage.theme;
-    runtime.apiHost = initMessage.apiHost;
     runtime.token = initMessage.tokenInfo;
 
     const appContext = new AppContext();
     appContext.locale = runtime.locale;
     appContext.theme = runtime.theme;
-
-    appContext.session = await sessionDataService.getContextAsync();
+    appContext.session = {
+      tenant: initMessage.tenant,
+      user: initMessage.user,
+    };
 
     return appContext;
   };

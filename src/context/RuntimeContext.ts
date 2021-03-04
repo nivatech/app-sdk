@@ -36,15 +36,6 @@ export class RuntimeContext {
   public token: TokenInfo;
 
   /**
-   * Host of the api to be used when making a session call
-   * e.g. https://argus.papiri.rs/v1
-   *
-   * @type {string}
-   * @memberof RuntimeContext
-   */
-  public apiHost: string;
-
-  /**
    * Correlation id sent as a part of init message from addon host
    *
    * @type {string}

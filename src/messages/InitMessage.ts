@@ -4,6 +4,8 @@ import { AppMessageType } from './AppMessageType';
 import { Theme } from '../sdk/Theme';
 import { Locale } from '../sdk/Locale';
 import { TokenInfo } from './TokenInfo';
+import { TenantInfo } from '../context/TenantInfo';
+import { UserInfo } from '../context/UserInfo';
 
 export class InitMessage extends AppMessage {
   /**
@@ -39,11 +41,18 @@ export class InitMessage extends AppMessage {
   public tokenInfo: TokenInfo;
 
   /**
-   * Host of the api to be used when making a session call
-   * e.g. https://argus.papiri.rs/v1
+   * Collection of information about the current tenant.
    *
-   * @type {string}
-   * @memberof InitMessage
+   * @type {TenantInfo}
+   * @memberof SessionContext
    */
-  public apiHost: string;
+  public tenant: TenantInfo;
+
+  /**
+   * Collection of information about current user.
+   *
+   * @type {UserInfo}
+   * @memberof SessionContext
+   */
+  public user: UserInfo;
 }
